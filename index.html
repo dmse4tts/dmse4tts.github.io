@@ -40,8 +40,555 @@
         }
     </script>
 
-    <h3> 1. The source code and the checkpoint of the proposed enhancement model will be made public in May.</h3>
-    <h3> 2. Please find below audio samples from the TTS listening test. For ethical issues we cannot release samples of found data and the respective enhanced results.</h3>
+    <h3> 1. The source code and the checkpoint of the proposed enhancement model will be released in May.</h3>
+    <h3> 2. Please find below enhancement samples on youtube audios. For ethical issues we cannot release samples of dound data and the respective enhanced results.</h3>
+
+    <table>
+        <tr>
+            <th width="900px"></th>
+            <th>Recording</th>
+            <th>Demucus</th>
+            <th>VoiceFixer</th>
+            <th>DMSEbase</th>
+            <th>DMSEbase<br>(VCTK)</th>
+            <th>DMSEtext</th>
+        </tr>
+        <tr>
+            <td>"噉同埋呢邊就係會所啦"<br>"gaam6 tung4 maai4 ne1 bin1 zau6 hai6 wui3 so2 laa1"</td>
+            <td><audio id='E1_ori' style='display:none'>
+                    <source src="enhancement_samples/Original/f_1.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E1_ori').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E1_ori'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E1_demucs' style='display:none'>
+                    <source src="enhancement_samples/Demucs/f_1.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E1_demucs').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E1_demucs'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E1_voicefixer' style='display:none'>
+                    <source src="enhancement_samples/VoiceFixer/f_1.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E1_voicefixer').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E1_voicefixer'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E1_diffnotext' style='display:none'>
+                    <source src="enhancement_samples/DMSEbase/f_1.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E1_diffnotext').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E1_diffnotext'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E1_diffvctk' style='display:none'>
+                    <source src="enhancement_samples/DMSEbase_VCTK/f_1.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E1_diffvctk').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E1_diffvctk'))">Stop</button>
+                </div>
+            </td>
+            <td>
+                <audio id='E1_diff' style='display:none'>
+                    <source src="enhancement_samples/DMSEtext/f_1.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E1_diff').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E1_diff'))">Stop</button>
+                </div>
+            </td>
+        </tr>
+    
+        <tr>
+            <td>"夠闊夠深同埋好多陽光"<br>"gau3 fut3 gau3 sam1 tung4 maai4 hou2 do1 joeng4 gwong1"</td>
+            <td><audio id='E2_ori' style='display:none'>
+                    <source src="enhancement_samples/Original/f_2.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E2_ori').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E2_ori'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E2_demucs' style='display:none'>
+                    <source src="enhancement_samples/Demucs/f_2.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E2_demucs').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E2_demucs'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E2_voicefixer' style='display:none'>
+                    <source src="enhancement_samples/VoiceFixer/f_2.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E2_voicefixer').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E2_voicefixer'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E2_diffnotext' style='display:none'>
+                    <source src="enhancement_samples/DMSEbase/f_2.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E2_diffnotext').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E2_diffnotext'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E2_diffvctk' style='display:none'>
+                    <source src="enhancement_samples/DMSEbase_VCTK/f_2.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E2_diffvctk').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E2_diffvctk'))">Stop</button>
+                </div>
+            </td>
+            <td>
+                <audio id='E2_diff' style='display:none'>
+                    <source src="enhancement_samples/DMSEtext/f_2.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E2_diff').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E2_diff'))">Stop</button>
+                </div>
+            </td>
+        </tr>
+    
+        <tr>
+            <td>"宜家我就喺灣仔區啱啱食完碗車仔面"<br>"ji4 gaa1 ngo5 zau6 hai2 waan1 zai2 keoi1 ngaam1 ngaam1 sik6 jyun4 wun2 ce1 zai2 min6"</td>
+            <td><audio id='E3_ori' style='display:none'>
+                    <source src="enhancement_samples/Original/f_3.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E3_ori').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E3_ori'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E3_demucs' style='display:none'>
+                    <source src="enhancement_samples/Demucs/f_3.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E3_demucs').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E3_demucs'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E3_voicefixer' style='display:none'>
+                    <source src="enhancement_samples/VoiceFixer/f_3.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E3_voicefixer').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E3_voicefixer'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E3_diffnotext' style='display:none'>
+                    <source src="enhancement_samples/DMSEbase/f_3.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E3_diffnotext').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E3_diffnotext'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E3_diffvctk' style='display:none'>
+                    <source src="enhancement_samples/DMSEbase_VCTK/f_3.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E3_diffvctk').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E3_diffvctk'))">Stop</button>
+                </div>
+            </td>
+            <td>
+                <audio id='E3_diff' style='display:none'>
+                    <source src="enhancement_samples/DMSEtext/f_3.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E3_diff').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E3_diff'))">Stop</button>
+                </div>
+            </td>
+        </tr>
+    
+        <tr>
+            <td>"其實如果你啲嚟香港旅行啊不如嚟多啲香港嘅面包鋪仲好喇"<br>"kei4 sat6 jyu4 gwo2 nei5 di1 lai2 hoeng1 gong2 leoi5 haang4 aa1 bat1 jyu4 lai2 do1 di1 hoeng1 gong2 ge3 min6 baau1 pou1
+            zung6 hou2 laa1"</td>
+            <td><audio id='E4_ori' style='display:none'>
+                    <source src="enhancement_samples/Original/f_4.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E4_ori').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E4_ori'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E4_demucs' style='display:none'>
+                    <source src="enhancement_samples/Demucs/f_4.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E4_demucs').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E4_demucs'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E4_voicefixer' style='display:none'>
+                    <source src="enhancement_samples/VoiceFixer/f_4.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E4_voicefixer').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E4_voicefixer'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E4_diffnotext' style='display:none'>
+                    <source src="enhancement_samples/DMSEbase/f_4.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E4_diffnotext').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E4_diffnotext'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E4_diffvctk' style='display:none'>
+                    <source src="enhancement_samples/DMSEbase_VCTK/f_4.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E4_diffvctk').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E4_diffvctk'))">Stop</button>
+                </div>
+            </td>
+            <td>
+                <audio id='E4_diff' style='display:none'>
+                    <source src="enhancement_samples/DMSEtext/f_4.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E4_diff').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E4_diff'))">Stop</button>
+                </div>
+            </td>
+        </tr>
+    
+        <tr>
+            <td>"除此之外咧佢仲會買賣好多誒咖啡用品嘞"<br>"ceoi4 ci2 zi1 ngoi6 le1 keoi5 zung6 wui3 maai5 maai6 hou2 do1 e6 gaa3 fe1 jung6 ban2 lok6"</td>
+            <td><audio id='E5_ori' style='display:none'>
+                    <source src="enhancement_samples/Original/f_5.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E5_ori').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E5_ori'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E5_demucs' style='display:none'>
+                    <source src="enhancement_samples/Demucs/f_5.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E5_demucs').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E5_demucs'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E5_voicefixer' style='display:none'>
+                    <source src="enhancement_samples/VoiceFixer/f_5.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E5_voicefixer').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E5_voicefixer'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E5_diffnotext' style='display:none'>
+                    <source src="enhancement_samples/DMSEbase/f_5.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E5_diffnotext').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E5_diffnotext'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E5_diffvctk' style='display:none'>
+                    <source src="enhancement_samples/DMSEbase_VCTK/f_5.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E5_diffvctk').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E5_diffvctk'))">Stop</button>
+                </div>
+            </td>
+            <td>
+                <audio id='E5_diff' style='display:none'>
+                    <source src="enhancement_samples/DMSEtext/f_5.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E5_diff').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E5_diff'))">Stop</button>
+                </div>
+            </td>
+        </tr>
+    
+        <tr>
+            <td>"跟住港島東嘅夜景"<br>"gan1 zyu6 gong2 dou2 dung1 ge3 je6 ging2"</td>
+            <td><audio id='E6_ori' style='display:none'>
+                    <source src="enhancement_samples/Original/m_1.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E6_ori').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E6_ori'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E6_demucs' style='display:none'>
+                    <source src="enhancement_samples/Demucs/m_1.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E6_demucs').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E6_demucs'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E6_voicefixer' style='display:none'>
+                    <source src="enhancement_samples/VoiceFixer/m_1.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E6_voicefixer').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E6_voicefixer'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E6_diffnotext' style='display:none'>
+                    <source src="enhancement_samples/DMSEbase/m_1.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E6_diffnotext').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E6_diffnotext'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E6_diffvctk' style='display:none'>
+                    <source src="enhancement_samples/DMSEbase_VCTK/m_1.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E6_diffvctk').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E6_diffvctk'))">Stop</button>
+                </div>
+            </td>
+            <td>
+                <audio id='E6_diff' style='display:none'>
+                    <source src="enhancement_samples/DMSEtext/m_1.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E6_diff').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E6_diff'))">Stop</button>
+                </div>
+            </td>
+        </tr>
+    
+        <tr>
+            <td>"其實我啲宜家最主要係用海魚嘞"<br>"kei4 sat6 ngo5 di1 ji4 gaa1 zeoi3 zyu2 jiu3 hai6 jung6 hoi2 jyu2 lok6"
+            </td>
+            <td><audio id='E7_ori' style='display:none'>
+                    <source src="enhancement_samples/Original/m_2.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E7_ori').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E7_ori'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E7_demucs' style='display:none'>
+                    <source src="enhancement_samples/Demucs/m_2.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E7_demucs').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E7_demucs'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E7_voicefixer' style='display:none'>
+                    <source src="enhancement_samples/VoiceFixer/m_2.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E7_voicefixer').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E7_voicefixer'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E7_diffnotext' style='display:none'>
+                    <source src="enhancement_samples/DMSEbase/m_2.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E7_diffnotext').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E7_diffnotext'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E7_diffvctk' style='display:none'>
+                    <source src="enhancement_samples/DMSEbase_VCTK/m_2.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E7_diffvctk').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E7_diffvctk'))">Stop</button>
+                </div>
+            </td>
+            <td>
+                <audio id='E7_diff' style='display:none'>
+                    <source src="enhancement_samples/DMSEtext/m_2.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E7_diff').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E7_diff'))">Stop</button>
+                </div>
+            </td>
+        </tr>
+    
+        <tr>
+            <td>"基本上咧就係兩個鐘頭之後咧就會開花嘞"<br>"gei1 bun2 soeng6 le1 zau6 hai6 loeng5 go3 zung1 tau4 zi1 hau6 le1 zau6 wui3 hoi1 faa1 lok6"</td>
+            <td><audio id='E8_ori' style='display:none'>
+                    <source src="enhancement_samples/Original/m_3.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E8_ori').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E8_ori'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E8_demucs' style='display:none'>
+                    <source src="enhancement_samples/Demucs/m_3.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E8_demucs').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E8_demucs'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E8_voicefixer' style='display:none'>
+                    <source src="enhancement_samples/VoiceFixer/m_3.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E8_voicefixer').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E8_voicefixer'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E8_diffnotext' style='display:none'>
+                    <source src="enhancement_samples/DMSEbase/m_3.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E8_diffnotext').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E8_diffnotext'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E8_diffvctk' style='display:none'>
+                    <source src="enhancement_samples/DMSEbase_VCTK/m_3.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E8_diffvctk').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E8_diffvctk'))">Stop</button>
+                </div>
+            </td>
+            <td>
+                <audio id='E8_diff' style='display:none'>
+                    <source src="enhancement_samples/DMSEtext/m_3.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E8_diff').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E8_diff'))">Stop</button>
+                </div>
+            </td>
+        </tr>
+    
+        <tr>
+            <td>"廣東人咧就鍾意食稀粥"<br>"gwong2 dung1 jan4 le1 zau6 zung1 ji3 sik6 hei1 zuk1"</td>
+            <td><audio id='E9_ori' style='display:none'>
+                    <source src="enhancement_samples/Original/m_4.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E9_ori').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E9_ori'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E9_demucs' style='display:none'>
+                    <source src="enhancement_samples/Demucs/m_4.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E9_demucs').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E9_demucs'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E9_voicefixer' style='display:none'>
+                    <source src="enhancement_samples/VoiceFixer/m_4.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E9_voicefixer').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E9_voicefixer'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E9_diffnotext' style='display:none'>
+                    <source src="enhancement_samples/DMSEbase/m_4.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E9_diffnotext').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E9_diffnotext'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E9_diffvctk' style='display:none'>
+                    <source src="enhancement_samples/DMSEbase_VCTK/m_4.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E9_diffvctk').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E9_diffvctk'))">Stop</button>
+                </div>
+            </td>
+            <td>
+                <audio id='E9_diff' style='display:none'>
+                    <source src="enhancement_samples/DMSEtext/m_4.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E9_diff').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E9_diff'))">Stop</button>
+                </div>
+            </td>
+        </tr>
+    
+        <tr>
+            <td>"我哋潮州人食粥咧就用筷子係噉扒"<br>"ngo5 dei2 ciu4 zau1 jan4 sik6 zuk1 le1 zau6 jung6 faai3 zi2 hai6 daam6 paa4"</td>
+            <td><audio id='E10_ori' style='display:none'>
+                    <source src="enhancement_samples/Original/m_5.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E10_ori').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E10_ori'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E10_demucs' style='display:none'>
+                    <source src="enhancement_samples/Demucs/m_5.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('D10_demucs').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('D10_demucs'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E10_voicefixer' style='display:none'>
+                    <source src="enhancement_samples/VoiceFixer/m_5.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E10_voicefixer').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E10_voicefixer'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E10_diffnotext' style='display:none'>
+                    <source src="enhancement_samples/DMSEbase/m_5.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E10_diffnotext').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E10_diffnotext'))">Stop</button>
+                </div>
+            </td>
+            <td><audio id='E10_diffvctk' style='display:none'>
+                    <source src="enhancement_samples/DMSEbase_VCTK/m_5.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E10_diffvctk').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E10_diffvctk'))">Stop</button>
+                </div>
+            </td>
+            <td>
+                <audio id='E10_diff' style='display:none'>
+                    <source src="enhancement_samples/DMSEtext/m_5.wav" type="audio/wav">
+                </audio>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('E10_diff').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('E10_diff'))">Stop</button>
+                </div>
+            </td>
+        </tr>
+    
+    
+    </table>
+
+    <h3> 2. Please find below audio samples from the TTS listening test. </h3>
   
 
     <table>
